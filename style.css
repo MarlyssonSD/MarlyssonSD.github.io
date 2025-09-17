@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-/* Define o padrão como dark-mode, removendo redundâncias */
 body {
     font-family: "Segoe UI", Tahoma, sans-serif;
     line-height: 1.6;
@@ -42,7 +41,7 @@ body {
     border: 4px solid #8e44ad;
     margin-bottom: 1rem;
     object-fit: cover;
-    object-position: center -33px; /* ajusta verticalmente */
+    object-position: center -33px;
 }
 
 .sidebar-header h1 {
@@ -81,12 +80,15 @@ body {
     margin: 0 0.5rem;
 }
 
+.sidebar-content {
+    transition: max-height 0.4s ease-in-out;
+}
+
 /* ================================================ */
 /* CONTEÚDO PRINCIPAL                               */
 /* ================================================ */
 .main-content {
-    /* AJUSTE: Corrigido para bater com a largura da sidebar */
-    margin-left: 250px; 
+    margin-left: 250px;
     width: calc(100% - 250px);
     padding: 2rem;
 }
@@ -124,7 +126,7 @@ footer {
     color: #ecf0f1;
 }
 
-.card span.badge { /* span com a classe badge */
+.card span.badge {
     display: block;
     font-size: 0.9rem;
     color: #bdc3c7;
@@ -150,7 +152,6 @@ footer {
 .cards-grid,
 .grid-projetos {
     display: grid;
-    /* OTIMIZAÇÃO: Padronizado para auto-fit, que é mais responsivo */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
@@ -160,17 +161,16 @@ footer {
     min-height: 420px;
 }
 
-/* UNIFICADO: Estilo para todas as imagens de card */
 .card img {
     width: 100%;
-    height: 200px; /* Altura padrão */
+    height: 200px;
     object-fit: cover;
     object-position: top;
     border-radius: 8px 8px 0 0;
 }
 
 .project-card img {
-    height: 250px; /* Sobrescreve apenas a altura para cards de projeto */
+    height: 250px;
 }
 
 /* ================================================ */
@@ -269,10 +269,38 @@ footer {
 }
 
 /* ================================================ */
+/* CONTROLE DO BOTÃO DE TEMA                        */
+/* ================================================ */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#toggle-theme-desktop {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #8e44ad;
+    color: #fff;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+#toggle-theme-mobile {
+    display: none;
+}
+
+/* ================================================ */
 /* TEMAS (Dark/Light Mode)                          */
 /* ================================================ */
-
-/* --- MODO CLARO --- */
 body.light-mode {
     background: #f4f4f5;
     color: #2c3e50;
@@ -347,14 +375,8 @@ body.light-mode .hero-content .hero-role {
 /* ANIMAÇÕES (Keyframes)                            */
 /* ================================================ */
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes animatedGradient {
@@ -379,33 +401,122 @@ body.light-mode .hero-content .hero-role {
 }
 
 /* ================================================ */
-/* RESPONSIVIDADE                                   */
+/* RESPONSIVIDADE (TUDO CONSOLIDADO AQUI)           */
 /* ================================================ */
 @media (max-width: 768px) {
     .wrapper {
         flex-direction: column;
     }
 
+    /* --- Sidebar como Cabeçalho --- */
     .sidebar {
         position: static;
         width: 100%;
         height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        flex-wrap: wrap;
     }
 
+    .sidebar-header {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .sidebar-header .foto-perfil {
+        width: 50px;
+        height: 50px;
+        margin: 0 1rem 0 0;
+        object-position: center center;
+    }
+
+    .sidebar-header h1 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .sidebar-header .resumo {
+        display: none;
+    }
+
+    /* --- Menu Hambúrguer --- */
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar-content {
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .sidebar.menu-open .sidebar-content {
+        max-height: 100vh;
+        padding-top: 1.5rem;
+    }
+
+    .sidebar.menu-open nav {
+        align-items: center;
+    }
+
+    /* --- Conteúdo Principal --- */
     .main-content {
         margin-left: 0;
         width: 100%;
     }
+    
+    .cards-grid,
+    .grid-projetos {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* --- Seção Hero --- */
+    .hero {
+        height: auto;
+        min-height: 40vh;
+        padding: 3rem 1.5rem;
+        clip-path: none;
+        border-radius: 0 0 30px 30px;
+    }
 
     .hero-content .hero-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        word-break: break-word;
     }
 
     .hero-content .hero-role {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .hero-content .hero-description {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    /* --- Botão de Tema --- */
+    #toggle-theme-desktop {
+        display: none;
+    }
+
+    #toggle-theme-mobile {
+        display: block;
+        width: 100%;
+        margin-top: 1.5rem;
+        padding: 0.8rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #8e44ad;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    body.light-mode #toggle-theme-mobile {
+        background-color: #f0f0f0;
+        color: #333;
     }
 }
