@@ -7,10 +7,117 @@
 
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #f4f6f8;
-  color: #333;
+  background: #121212; /* Fundo escuro */
+  color: #ecf0f1; /* Texto principal branco */
   line-height: 1.6;
 }
+
+/* Modo Escuro */
+body.dark-mode {
+  background: #121212;
+  color: #ecf0f1;
+}
+
+body.dark-mode .sidebar {
+  background: #1a1a1a;
+  color: #ecf0f1;
+}
+
+body.dark-mode .sidebar-header .foto-perfil {
+  border-color: #8e44ad;
+}
+
+body.dark-mode h2 {
+  color: #ecf0f1;
+  border-bottom: 2px solid #8e44ad;
+}
+
+body.dark-mode .card {
+  background: #222;
+  border-left: 5px solid #8e44ad;
+  color: #ecf0f1;
+}
+
+body.dark-mode .card a {
+  color: #8e44ad;
+}
+
+body.dark-mode .card a:hover {
+  color: #9b59b6;
+}
+
+body.dark-mode .habilidades li {
+  background: #2c2c2c;
+  color: #ecf0f1;
+}
+
+/* Modo Claro */
+body.light-mode {
+  background: #f4f4f5; /* fundo suave */
+  color: #2c3e50; /* texto principal */
+}
+
+body.light-mode .sidebar {
+  background: #ffffff; /* sidebar branca */
+  color: #2c3e50;
+}
+
+body.light-mode .sidebar-header .foto-perfil {
+  border-color: #8e44ad; /* destaque roxo */
+}
+
+body.light-mode h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #8e44ad;
+}
+
+body.light-mode .card {
+  background: #ffffff; /* cards brancos */
+  border-left: 5px solid #8e44ad;
+  color: #2c3e50;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave */
+}
+
+body.light-mode .card a {
+  color: #8e44ad;
+}
+
+body.light-mode .card a:hover {
+  color: #5e2a7e; /* roxo mais escuro no hover */
+}
+
+body.light-mode .habilidades li {
+  background: #ececec; /* fundo levemente cinza */
+  color: #2c3e50;
+}
+
+body.light-mode .sidebar nav a {
+  color: #2c3e50;
+}
+
+body.light-mode .sidebar nav a:hover {
+  background: #f0f0f0;
+  color: #8e44ad;
+}
+
+body.light-mode .sidebar-footer a {
+  color: #8e44ad;
+}
+
+body.light-mode .card h3 {
+  color: #2c3e50; /* bom contraste com fundo claro */
+}
+
+body.light-mode .card span {
+  color: #7f8c8d; /* subtítulo discreto no fundo claro */
+}
+
+body.light-mode .sidebar-header .resumo {
+  font-size: 0.9rem;
+  color: #7f8c8d; /* Cinza claro */
+  margin-bottom: 2rem;
+}
+
 
 .wrapper {
   display: flex;
@@ -19,7 +126,7 @@ body {
 /* Sidebar (Header Lateral) */
 .sidebar {
   width: 250px;
-  background: #2c3e50; /* Cor mais profissional */
+  background: #1a1a1a; /* Preto suave */
   color: #ecf0f1;
   padding: 2rem 1.5rem;
   position: fixed;
@@ -34,7 +141,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 4px solid #3498db; /* Cor de destaque */
+  border: 4px solid #8e44ad; /* Roxo */
   margin-bottom: 1rem;
 }
 
@@ -44,7 +151,7 @@ body {
 
 .sidebar-header .resumo {
   font-size: 0.9rem;
-  color: #bdc3c7;
+  color: #bdc3c7; /* Cinza claro */
   margin-bottom: 2rem;
 }
 
@@ -64,64 +171,67 @@ body {
 }
 
 .sidebar nav a:hover {
-  background: #34495e;
-  color: #3498db;
+  background: #2c2c2c; /* Hover escuro */
+  color: #9b59b6; /* Lilás */
 }
 
 .sidebar-footer {
-  margin-top: auto; /* Empurra o rodapé para o final */
+  margin-top: auto;
   padding-top: 2rem;
 }
 
 .sidebar-footer a {
-  color: #3498db;
+  color: #8e44ad; /* Roxo */
   text-decoration: none;
   margin: 0 0.5rem;
 }
 
 /* Conteúdo Principal */
 .main-content {
-  margin-left: 280px; /* Mesma largura da sidebar */
+  margin-left: 280px;
   width: calc(100% - 280px);
   padding: 2rem;
 }
 
 h2 {
   margin-bottom: 1.5rem;
-  color: #2c3e50;
-  border-bottom: 2px solid #3498db;
+  color: #ecf0f1;
+  border-bottom: 2px solid #8e44ad;
   padding-bottom: 0.5rem;
   display: inline-block;
 }
 
 /* Cards */
 .card {
-  background: #fff;
+  background: #222; /* Fundo escuro */
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  border-left: 5px solid #3498db;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border-left: 5px solid #8e44ad;
+  color: #ecf0f1;
 }
 
 .card h3 {
   margin-bottom: .5rem;
-  color: #2c3e50;
+  color: #ecf0f1;
 }
 
 .card span {
   display: block;
   font-size: 0.9rem;
-  color: #7f8c8d;
+  color: #bdc3c7;
   margin-bottom: 1rem;
 }
 
 .card a {
-  color: #3498db;
+  color: #8e44ad;
   font-weight: bold;
   text-decoration: none;
 }
+
 .card a:hover {
+  color: #9b59b6;
   text-decoration: underline;
 }
 
@@ -139,12 +249,13 @@ h2 {
 }
 .habilidades li {
   margin-bottom: .8rem;
-  background: #ecf0f1;
+  background: #2c2c2c;
   padding: 0.8rem;
   border-radius: 5px;
+  color: #ecf0f1;
 }
 .habilidades li strong {
-  color: #2c3e50;
+  color: #8e44ad;
 }
 
 /* Footer do Conteúdo Principal */
@@ -152,7 +263,7 @@ footer {
   text-align: center;
   padding: 1.5rem;
   margin-top: 2rem;
-  color: #7f8c8d;
+  color: #bdc3c7;
 }
 
 /* Responsividade */
@@ -174,15 +285,16 @@ footer {
 .card ul {
   margin-top: 8px;
   margin-bottom: 0;
-  padding-left: 18px; /* controla o recuo */
+  padding-left: 18px;
 }
 
 .card ul ul {
   margin-top: 4px;
 }
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px; /* espaço entre os cards */
+  gap: 20px;
   margin-top: 1.5rem;
 }
