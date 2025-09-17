@@ -10,45 +10,51 @@
 </head>
 
 <body class="dark-mode">
-        <button id="toggle-theme" style="position: fixed; top: 1rem; right: 1rem; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; background: #8e44ad; color: #fff; z-index: 1000;">
+    <button id="toggle-theme"
+        style="position: fixed; top: 1rem; right: 1rem; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; background: #8e44ad; color: #fff; z-index: 1000;">
         🌙 Modo Claro</button>
     <div class="wrapper">
         <aside class="sidebar">
             <div class="sidebar-header">
+                <img src="imgs/perfil/marlysson.jpg" alt="Foto de Marlysson" class="foto-perfil">
                 <h1>Marlysson Silva Dantas</h1>
-                <p class="resumo">Desenvolvedor Backend apaixonado por tecnologia, aprendizado contínuo e criação de
+                <p class="resumo">Desenvolvedor Frontend apaixonado por tecnologia, aprendizado contínuo e criação de
                     soluções inteligentes.</p>
             </div>
             <nav>
-                <a href="#sobre"><i class="fas fa-user"></i> Sobre</a>
+                <a href="#hero"><i class="fas fa-user"></i> Sobre</a>
                 <a href="#experiencia"><i class="fas fa-briefcase"></i> Experiência</a>
                 <a href="#educacao"><i class="fas fa-graduation-cap"></i> Educação</a>
                 <a href="#habilidades"><i class="fas fa-cogs"></i> Habilidades</a>
                 <a href="#projetos"><i class="fas fa-project-diagram"></i> Projetos</a>
             </nav>
             <div class="sidebar-footer">
-                <a href="https://github.com/seunome" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
-                <a href="https://linkedin.com/in/seunome" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/MarlyssonSD" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+                <a href="https://www.linkedin.com/in/marlysson-silva-dantas-msd/" target="_blank"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
             </div>
         </aside>
 
         <main class="main-content">
-            <section id="sobre" class="container">
-                <h2>Sobre Mim</h2>
-                <p>
-                    Sou um desenvolvedor de software apaixonado por tecnologia e aprendizado contínuo.
-                    Busco criar soluções inovadoras, escaláveis e de impacto real, sempre aprimorando
-                    minhas habilidades e explorando novas ferramentas.
-                </p>
+            <section id="hero" class="hero">
+                <div class="hero-content">
+                    <p class="hero-subtitle">Olá, sou...</p>
+                    <h1 class="hero-title">Marlysson Dantas</h1>
+                    <h2 class="hero-role">Desenvolvedor Frontend</h2>
+                    <p class="hero-description">
+                        Sou um desenvolvedor front-end focado em criar interfaces intuitivas e de alta qualidade.
+                        Busco transformar ideias em experiências visuais escaláveis e funcionais, sempre aprimorando
+                        minhas habilidades em <strong>React, HTML, CSS e JavaScript</strong> e explorando novas
+                        tecnologias.
+                    </p>
+                </div>
             </section>
-
             <section id="experiencia" class="container">
                 <h2>Experiência Profissional</h2>
-
                 <div class="cards-grid">
                     <div class="card">
-                        <h3>Diretor Presidente - Itatech Jr.</h3>
-                        <span class="badge">2024.2 – 2025.2</span>
+                        <h3><i class="fas fa-building"></i> Diretor Presidente - Itatech Jr.</h3>
+                        <span class="badge">2025.2 – 2024.2</span>
                         <ul>
                             <li>Coordenei diretorias e implementei fluxo de entregas semanais, garantindo alinhamento
                                 estratégico e aumento da eficiência da empresa.</li>
@@ -56,10 +62,9 @@
                             <li>Interagi diretamente com clientes, acompanhando demandas e entregas.</li>
                         </ul>
                     </div>
-
                     <div class="card">
-                        <h3>Desenvolvedor Frontend – Itatech Jr.</h3>
-                        <span class="badge">2023.2 – 2024.2</span>
+                        <h3><i class="fas fa-building"></i> Desenvolvedor Frontend – Itatech Jr.</h3>
+                        <span class="badge">2024.2 – 2023.2</span>
                         <ul>
                             <li>Atuei no desenvolvimento de websites com WordPress em um ambiente de equipe ágil,
                                 entregando projetos como o portal g2psi.educacao.ws e garantindo a satisfação dos
@@ -73,68 +78,177 @@
                         </ul>
                     </div>
 
-                    <!-- Outros cards de experiência -->
                 </div>
             </section>
-
 
             </section>
 
             <section id="educacao" class="container">
                 <h2>Educação</h2>
                 <div class="card">
-                    <h3>Bacharelado em Sistemas de Informação</h3>
+                    <h3><i class="fas fa-graduation-cap"></i> Formado em Sistemas de Informação</h3>
                     <span>Universidade Federal de Sergipe (2021 – 2026)</span>
                 </div>
             </section>
 
-            <section id="habilidades" class="container">
-                <h2>Habilidades Técnicas</h2>
-                <ul class="habilidades">
-                    <li><strong>Linguagens:</strong> Python, JavaScript, Java, SQL</li>
-                    <li><strong>Frameworks:</strong> React, Node.js, Bootstrap</li>
-                    <li><strong>Bancos de Dados:</strong> MySQL, SQLServer, PostgreSQL</li>
-                    <li><strong>Ferramentas:</strong> Git, Docker, Postman</li>
-                </ul>
-            </section>
+            <section id="hard-skills" class="container">
+    <h2>Habilidades Técnicas</h2>
+    <div class="skills-grid">
+        <div class="skill">Python</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">C#</div>
+        <div class="skill">Java</div>
+        <div class="skill">SQL</div>
+        <div class="skill">React</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Bootstrap</div>
+    </div>
+</section>
+
+<section id="soft-skills" class="container">
+    <h2>Habilidades Comportamentais</h2>
+    <div class="skills-grid">
+        <div class="skill">Comunicação eficaz</div>
+        <div class="skill">Trabalho em equipe</div>
+        <div class="skill">Proatividade</div>
+        <div class="skill">Adaptabilidade</div>
+        <div class="skill">Resolução de problemas</div>
+        <div class="skill">Gestão de tempo</div>
+    </div>
+</section>
 
             <section id="projetos" class="container">
                 <h2>Projetos</h2>
                 <div class="grid-projetos">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x300" alt="Imagem do Projeto Assistente de Crédito">
+
+                    <!-- Projeto AjudAki -->
+                    <div class="card project-card">
+                        <img src="imgs/projets/Logo_AjudAki.webp" alt="Imagem do Projeto AjudAki">
+                        <div class="card-content">
+                            <h3>AjudAki – Aplicação Desktop</h3>
+                            <p class="project-desc">
+                                Sistema desktop para cadastro de serviços e autenticação, desenvolvido em C# e .NET com
+                                arquitetura MVC.
+                            </p>
+                            <div class="tecnologias">
+                                <span>C#</span>
+                                <span>.NET</span>
+                                <span>MVC</span>
+                                <span>Razor Pages</span>
+                                <span>HTML5</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="https://github.com/marcosdosea/AjudAki" class="card-link" target="_blank">🔗
+                                Repositório</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Rota UFS -->
+                    <div class="card project-card">
+                        <img src="imgs/projets/RotasUFS.png" alt="Imagem do Projeto Rota UFS">
+                        <div class="card-content">
+                            <h3>Rota UFS – Sistema de Rotas no Campus</h3>
+                            <p class="project-desc">
+                                Aplicação full stack para cálculo e visualização de rotas no campus da UFS, integrando
+                                React e Python.
+                            </p>
+                            <div class="tecnologias">
+                                <span>React</span>
+                                <span>TypeScript</span>
+                                <span>TailwindCSS</span>
+                                <span>Python</span>
+                                <span>Node.js</span>
+                                <span>REST APIs</span>
+                            </div>
+                            <a href="https://github.com/MarlyssonSD/Rotas-Da-UFS" class="card-link" target="_blank">🔗
+                                Repositório</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Itatech Jr -->
+                    <div class="card project-card">
+                        <img src="imgs/projets/Itatechjr.png" alt="Imagem da Itatech Jr">
+                        <div class="card-content">
+                            <h3>Itatech Jr. – Empresa Júnior de TI</h3>
+                            <p class="project-desc">
+                                Desenvolvimento de sites institucionais com WordPress e Elementor, focados em desempenho
+                                e usabilidade.
+                            </p>
+                            <div class="tecnologias">
+                                <span>WordPress</span>
+                                <span>CSS</span>
+                                <span>Elementor</span>
+                            </div>
+                            <a href="https://itatechjr.com.br/" class="card-link" target="_blank">🔗 Acesse o site</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto G2PSI -->
+                    <div class="card project-card">
+                        <img src="imgs/projets/g2psi.png" alt="Imagem do G2PSI">
+                        <div class="card-content">
+                            <h3>G2PSI – Grupo de Psicologia e Saúde Integral</h3>
+                            <p class="project-desc">
+                                Portal institucional para divulgação de atividades acadêmicas e serviços do grupo de
+                                pesquisa em Psicologia.
+                            </p>
+                            <div class="tecnologias">
+                                <span>WordPress</span>
+                                <span>CSS</span>
+                                <span>Elementor</span>
+                            </div>
+                            <a href="http://g2psi.educacao.ws/" class="card-link" target="_blank">🔗 Acesse o site</a>
+                        </div>
+                    </div>
+
+                    <!-- Projeto Assistente de Crédito -->
+                    <div class="card project-card">
+                        <img src="imgs/projets/Assistente IA.png" alt="Imagem do Projeto Assistente de Crédito">
                         <div class="card-content">
                             <h3>Assistente Inteligente de Crédito</h3>
+                            <p class="project-desc">
+                                Sistema de análise de crédito com frontend em Streamlit e backend em FastAPI,
+                                comunicando-se via REST APIs.
+                            </p>
                             <div class="tecnologias">
-                                <span>Python, FastAPI, Streamlit</span>
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>Streamlit</span>
+                                <span>Requests</span>
                             </div>
-                            <a href="#" class="card-link">🔗 Repositório</a>
+                            <a href="https://github.com/MarlyssonSD/assistente-inteligente-de-credito" class="card-link"
+                                target="_blank">🔗 Repositório</a>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x300" alt="Imagem do Projeto IntelCam">
+                    <!-- Projeto IntelCam -->
+                    <div class="card project-card">
+                        <img src="imgs/projets/IntelCam.png" alt="Imagem do Projeto IntelCam">
                         <div class="card-content">
                             <h3>IntelCam – Detecção em Tempo Real</h3>
+                            <p class="project-desc">
+                                Sistema de visão computacional em tempo real, utilizando ESP32-CAM e IA para
+                                reconhecimento de alvos.
+                            </p>
                             <div class="tecnologias">
-                                <span>C++, Python, OpenCV</span>
+                                <span>ESP32-CAM</span>
+                                <span>Docker</span>
+                                <span>C++</span>
+                                <span>Python</span>
+                                <span>OpenCV</span>
+                                <span>IA</span>
+                                <span>PyTorch</span>
                             </div>
                             <a href="#" class="card-link">🔗 Repositório</a>
                         </div>
                     </div>
 
-                    <div class="card">
-                        <img src="https://via.placeholder.com/400x300" alt="Imagem do Portfólio Pessoal">
-                        <div class="card-content">
-                            <h3>Portfólio Pessoal</h3>
-                            <div class="tecnologias">
-                                <span>HTML, CSS, JavaScript</span>
-                            </div>
-                            <a href="#" class="card-link">🔗 Demonstração</a>
-                        </div>
-                    </div>
                 </div>
             </section>
+
 
             </section>
 

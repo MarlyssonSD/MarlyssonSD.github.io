@@ -1,300 +1,589 @@
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background: #121212; /* Fundo escuro */
-  color: #ecf0f1; /* Texto principal branco */
-  line-height: 1.6;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #121212;
+    /* Fundo escuro */
+    color: #ecf0f1;
+    /* Texto principal branco */
+    line-height: 1.6;
 }
 
 /* Modo Escuro */
 body.dark-mode {
-  background: #121212;
-  color: #ecf0f1;
+    background: #121212;
+    color: #ecf0f1;
 }
 
 body.dark-mode .sidebar {
-  background: #1a1a1a;
-  color: #ecf0f1;
+    background: #1a1a1a;
+    color: #ecf0f1;
 }
 
 body.dark-mode .sidebar-header .foto-perfil {
-  border-color: #8e44ad;
+    border-color: #8e44ad;
 }
 
 body.dark-mode h2 {
-  color: #ecf0f1;
-  border-bottom: 2px solid #8e44ad;
+    color: #ecf0f1;
+    border-bottom: 2px solid #8e44ad;
 }
 
 body.dark-mode .card {
-  background: #222;
-  border-left: 5px solid #8e44ad;
-  color: #ecf0f1;
+    background: #222;
+    border-left: 5px solid #8e44ad;
+    color: #ecf0f1;
 }
 
 body.dark-mode .card a {
-  color: #8e44ad;
+    color: #8e44ad;
 }
 
 body.dark-mode .card a:hover {
-  color: #9b59b6;
+    color: #9b59b6;
 }
 
 body.dark-mode .habilidades li {
-  background: #2c2c2c;
-  color: #ecf0f1;
+    background: #2c2c2c;
+    color: #ecf0f1;
 }
 
 /* Modo Claro */
 body.light-mode {
-  background: #f4f4f5; /* fundo suave */
-  color: #2c3e50; /* texto principal */
+    background: #f4f4f5;
+    /* fundo suave */
+    color: #2c3e50;
+    /* texto principal */
 }
 
 body.light-mode .sidebar {
-  background: #ffffff; /* sidebar branca */
-  color: #2c3e50;
+    background: #ffffff;
+    /* sidebar branca */
+    color: #2c3e50;
 }
 
 body.light-mode .sidebar-header .foto-perfil {
-  border-color: #8e44ad; /* destaque roxo */
+    border-color: #8e44ad;
+    /* destaque roxo */
 }
 
 body.light-mode h2 {
-  color: #2c3e50;
-  border-bottom: 2px solid #8e44ad;
+    color: #2c3e50;
+    border-bottom: 2px solid #8e44ad;
 }
 
 body.light-mode .card {
-  background: #ffffff; /* cards brancos */
-  border-left: 5px solid #8e44ad;
-  color: #2c3e50;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave */
+    background: #ffffff;
+    /* cards brancos */
+    border-left: 5px solid #8e44ad;
+    color: #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* sombra suave */
 }
 
 body.light-mode .card a {
-  color: #8e44ad;
+    color: #8e44ad;
 }
 
 body.light-mode .card a:hover {
-  color: #5e2a7e; /* roxo mais escuro no hover */
+    color: #5e2a7e;
+    /* roxo mais escuro no hover */
 }
 
 body.light-mode .habilidades li {
-  background: #ececec; /* fundo levemente cinza */
-  color: #2c3e50;
+    background: #ececec;
+    /* fundo levemente cinza */
+    color: #2c3e50;
 }
 
 body.light-mode .sidebar nav a {
-  color: #2c3e50;
+    color: #2c3e50;
 }
 
 body.light-mode .sidebar nav a:hover {
-  background: #f0f0f0;
-  color: #8e44ad;
+    background: #f0f0f0;
+    color: #8e44ad;
 }
 
 body.light-mode .sidebar-footer a {
-  color: #8e44ad;
+    color: #8e44ad;
 }
 
 body.light-mode .card h3 {
-  color: #2c3e50; /* bom contraste com fundo claro */
+    color: #2c3e50;
+    /* bom contraste com fundo claro */
 }
 
 body.light-mode .card span {
-  color: #7f8c8d; /* subtítulo discreto no fundo claro */
+    color: #7f8c8d;
+    /* subtítulo discreto no fundo claro */
 }
 
 body.light-mode .sidebar-header .resumo {
-  font-size: 0.9rem;
-  color: #7f8c8d; /* Cinza claro */
-  margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    /* Cinza claro */
+    margin-bottom: 2rem;
 }
 
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;   /* deixa circular */
+    border: 4px solid #8e44ad;  /* borda roxa */
+    margin-bottom: 1rem;
+    margin-top: -20px;  
+    object-position: center -33px; /* ajusta verticalmente */
+
+    object-fit: cover;    /* mantém proporção da imagem */
+}
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar linha só se necessário */
+    gap: 4px;        /* espaço entre os spans */
+}
+
+.tecnologias span {
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-top: 5px;  
+    font-size: 0.85rem;
+    display: inline-block;
+    background-color: #8e44ad; /* roxo por padrão */
+    color: #fff;
+}
+
+/* Dark / Light mode */
+body.light-mode .tecnologias span {
+    background-color: #ececec; /* cinza leve */
+    color: #2c3e50;
+}
 
 .wrapper {
-  display: flex;
+    display: flex;
 }
 
 /* Sidebar (Header Lateral) */
 .sidebar {
-  width: 250px;
-  background: #1a1a1a; /* Preto suave */
-  color: #ecf0f1;
-  padding: 2rem 1.5rem;
-  position: fixed;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    width: 250px;
+    background: #1a1a1a;
+    /* Preto suave */
+    color: #ecf0f1;
+    padding: 2rem 1.5rem;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .sidebar-header .foto-perfil {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 4px solid #8e44ad; /* Roxo */
-  margin-bottom: 1rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #8e44ad;
+    /* Roxo */
+    margin-bottom: 1rem;
 }
 
 .sidebar-header h1 {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .sidebar-header .resumo {
-  font-size: 0.9rem;
-  color: #bdc3c7; /* Cinza claro */
-  margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    /* Cinza claro */
+    margin-bottom: 2rem;
 }
 
 .sidebar nav {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .sidebar nav a {
-  color: #ecf0f1;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.8rem 0;
-  transition: background 0.3s, color 0.3s;
-  border-radius: 5px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.8rem 0;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
 .sidebar nav a:hover {
-  background: #2c2c2c; /* Hover escuro */
-  color: #9b59b6; /* Lilás */
+    background: #2c2c2c;
+    /* Hover escuro */
+    color: #9b59b6;
+    /* Lilás */
 }
 
 .sidebar-footer {
-  margin-top: auto;
-  padding-top: 2rem;
+    margin-top: auto;
+    padding-top: 2rem;
 }
 
 .sidebar-footer a {
-  color: #8e44ad; /* Roxo */
-  text-decoration: none;
-  margin: 0 0.5rem;
+    color: #8e44ad;
+    /* Roxo */
+    text-decoration: none;
+    margin: 0 0.5rem;
 }
 
 /* Conteúdo Principal */
 .main-content {
-  margin-left: 280px;
-  width: calc(100% - 280px);
-  padding: 2rem;
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    padding: 2rem;
 }
 
 h2 {
-  margin-bottom: 1.5rem;
-  color: #ecf0f1;
-  border-bottom: 2px solid #8e44ad;
-  padding-bottom: 0.5rem;
-  display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #ecf0f1;
+    border-bottom: 2px solid #8e44ad;
+    padding-bottom: 0.5rem;
+    display: inline-block;
 }
 
 /* Cards */
 .card {
-  background: #222; /* Fundo escuro */
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  border-left: 5px solid #8e44ad;
-  color: #ecf0f1;
+    background: #222;
+    /* Fundo escuro */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid #8e44ad;
+    color: #ecf0f1;
 }
 
 .card h3 {
-  margin-bottom: .5rem;
-  color: #ecf0f1;
+    margin-bottom: .5rem;
+    color: #ecf0f1;
 }
 
 .card span {
-  display: block;
-  font-size: 0.9rem;
-  color: #bdc3c7;
-  margin-bottom: 1rem;
+    display: block;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    margin-bottom: 1rem;
 }
 
 .card a {
-  color: #8e44ad;
-  font-weight: bold;
-  text-decoration: none;
+    color: #8e44ad;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .card a:hover {
-  color: #9b59b6;
-  text-decoration: underline;
+    color: #9b59b6;
+    text-decoration: underline;
+}
+
+/*  cards de projeto */
+.project-card {
+    min-height: 420px;
+}
+
+.project-card img {
+    height: 250px;
+    /* sobrescrevendo só a altura */
+    object-fit: cover;
+    object-position: top;
 }
 
 /* Grid Projetos */
 .grid-projetos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    /* diminua o min para caber mais cards */
+    gap: 1.5rem;
 }
+
 
 /* Habilidades */
 .habilidades {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
+
 .habilidades li {
-  margin-bottom: .8rem;
-  background: #2c2c2c;
-  padding: 0.8rem;
-  border-radius: 5px;
-  color: #ecf0f1;
+    margin-bottom: .8rem;
+    background: #2c2c2c;
+    padding: 0.8rem;
+    border-radius: 5px;
+    color: #ecf0f1;
 }
+
 .habilidades li strong {
-  color: #8e44ad;
+    color: #8e44ad;
 }
 
 /* Footer do Conteúdo Principal */
 footer {
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: 2rem;
-  color: #bdc3c7;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: #bdc3c7;
+}
+.skills-grid {
+    display: flex;         /* flex ao invés de grid */
+    flex-wrap: wrap;       /* quebra de linha automática */
+    gap: 0.5rem 1rem;      /* espaçamento vertical e horizontal */
+}
+
+.skill {
+    background-color: #8e44ad;
+    color: rgb(212, 208, 208);
+    padding: 0.5rem 1rem; /* largura adaptável ao texto */
+    border-radius: 6px;
+    font-weight: bold;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;   /* evita quebrar o texto dentro do badge */
+}
+
+/* Modo claro */
+body.light-mode .skill {
+    background-color: #d3d3d3;
+    color: #333;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.card img {
+    width: 100%;
+    /* ocupa toda a largura do card */
+    height: 200px;
+    /* altura fixa */
+    object-fit: cover;
+    /* mantém proporção, corta se necessário */
+    object-position: top;
+    /* mantém o topo, corta a parte de baixo */
+    border-radius: 8px 8px 0 0;
+    /* topo arredondado */
+}
+
+
+.card ul {
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding-left: 18px;
+}
+
+.card ul ul {
+    margin-top: 4px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.card h3 .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+/* --- Hero Suave e Elegante --- */
+
+/* As animações @keyframes continuam as mesmas */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animatedGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #ecf0f1;
+    }
+}
+
+/* Estilo principal do Hero (Modificado para ser mais suave) */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    /* <<-- 1. ALTURA REDUZIDA */
+    text-align: center;
+    padding: 0 2rem;
+    color: #fff;
+    position: relative;
+
+    /* Gradiente com animação mais lenta */
+    background: linear-gradient(135deg, #8e44ad, #5e2a7e, #2c3e50);
+    background-size: 200% 200%;
+    animation: animatedGradient 20s ease infinite;
+    /* <<-- 3. ANIMAÇÃO MAIS LENTA E SUAVE */
+
+    /* <<-- 2. BORDA INFERIOR CURVADA */
+    clip-path: ellipse(100% 60% at 50% 40%);
+}
+
+/* O resto do CSS para .hero-content pode permanecer o mesmo */
+.hero-content .hero-subtitle,
+.hero-content .hero-title,
+.hero-content .hero-description {
+    animation: slideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    opacity: 0;
+}
+
+.hero-content .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    animation-delay: 0.2s;
+}
+
+.hero-content .hero-title {
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .hero-role {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid #ecf0f1;
+    width: 0;
+    animation:
+        typing 2.5s steps(40, end) forwards,
+        blink-caret .75s step-end infinite;
+    animation-delay: 1.2s;
+}
+
+.hero-content .hero-description {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation-delay: 4s;
+}
+
+/* ESTILOS DO HERO PARA O MODO CLARO (CORREÇÃO)    */
+
+body.light-mode .hero {
+    /* Gradiente suave e profissional para o modo claro */
+    background: linear-gradient(135deg, #483353, #e3cce6, #483353);
+    color: #2c3e50;
+    /* Texto principal escuro para contraste */
+}
+
+body.light-mode .hero-content .hero-title {
+    text-shadow: none;
+    /* Remove a sombra do texto que não funciona bem em fundos claros */
+}
+
+/* É preciso definir uma nova animação para o cursor no modo claro */
+@keyframes blink-caret-light {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #2c3e50;
+    }
+
+    /* Cor escura para o cursor */
+}
+
+/* Aplica a nova cor do cursor e a nova animação de piscar */
+body.light-mode .hero-content .hero-role {
+    border-right-color: #2c3e50;
+    /* Garante que a cor inicial do cursor seja escura */
+
+    /* Reaplicamos a animação para incluir a nova animação do cursor */
+    animation:
+        typing 2.5s steps(40, end) forwards,
+        blink-caret-light .75s step-end infinite;
+    animation-delay: 1.2s;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .wrapper {
-    flex-direction: column;
-  }
-  .sidebar {
-    position: static;
-    width: 100%;
-    height: auto;
-  }
-  .main-content {
-    margin-left: 0;
-    width: 100%;
-  }
-}
+    .hero-content .hero-title {
+        font-size: 2.2rem;
+    }
 
-.card ul {
-  margin-top: 8px;
-  margin-bottom: 0;
-  padding-left: 18px;
-}
+    .hero-content .hero-role {
+        font-size: 1.5rem;
+    }
 
-.card ul ul {
-  margin-top: 4px;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 1.5rem;
+    .hero-content .hero-description {
+        font-size: 1rem;
+    }
 }
