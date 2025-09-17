@@ -14,9 +14,7 @@ toggleBtns.forEach(btn => {
     });
 });
 
-
 // --- Lógica para o menu responsivo (hambúrguer) ---
-
 const menuToggle = document.getElementById("menu-toggle");
 const sidebar = document.querySelector(".sidebar");
 
